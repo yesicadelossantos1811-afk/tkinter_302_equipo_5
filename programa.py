@@ -115,3 +115,5 @@ tk.Button(ventana, text="Actualizar", command=actualizar, bg=COLOR_BOTON, fg="wh
 tk.Button(ventana, text="Eliminar", command=eliminar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 
 ventana.mainloop()
+
+

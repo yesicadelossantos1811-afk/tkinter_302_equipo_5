@@ -4,7 +4,6 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 
-# Cadena de conexion - base del equipo 5
 def conectar():
     return mysql.connector.connect(
         host="localhost",
@@ -15,9 +14,9 @@ def conectar():
 
 numero_secreto = random.randint(1, 20)
 
-# --- CRUD ---
+#Rosas Galván Itzel: def guardar y botón guardar 
 def guardar():
-    # Guarda el intento que escribiste
+    
     try:
         intento = int(caja.get())
         if intento > numero_secreto:
@@ -66,7 +65,7 @@ def eliminar():
         messagebox.showerror("Error", str(e))
 
 def probar():
-    # Juego: dice muy alto, muy bajo o le atinaste
+    
     try:
         intento = int(caja.get())
     except:

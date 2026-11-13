@@ -108,6 +108,8 @@ caja.pack(pady=5)
 mensaje = tk.StringVar(); mensaje.set("Ya pensé un número, ¡adivínalo!")
 tk.Label(ventana, textvariable=mensaje, bg=FONDO, fg=COLOR_TEXTO, font=("Arial", 11, "bold"), wraplength=320).pack(pady=5)
 
+#Bastida Huerta Cristian Alberto: Nombres del equipo
+tk.Label(ventana, text="Equipo 5: Cristian, Yessica, Itzel, Miguel, Mariela", bg=FONDO, fg=COLOR_TEXTO, font=("Arial", 10, "bold")).pack(pady=2)
 tk.Button(ventana, text="Probar", command=probar, bg=COLOR_BOTON, fg="white", font=("Arial", 11, "bold"), relief="flat", width=15).pack(pady=4)
 tk.Button(ventana, text="Otro número", command=otro_numero, bg=COLOR_BOTON, fg="white", font=("Arial", 11, "bold"), relief="flat", width=15).pack(pady=4)
 

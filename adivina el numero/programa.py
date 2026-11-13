@@ -14,9 +14,28 @@ def conectar():
     )
 
 numero_secreto = random.randint(1, 20)
-
+#Itzel Rosas Galván: Avisó si faltaban datos 
 # --- CRUD ---
 def guardar():
+def obtener_intento():
+    texto = caja.get().strip()
+
+    if texto == "":
+        aviso.config(text="¡Falta escribir un número!")
+        return None
+
+    try:
+        intento = int(texto)
+    except ValueError:
+        aviso.config(text="Escribe un número válido.")
+        return None
+
+    if intento < 1 or intento > 20:
+        aviso.config(text="El número debe estar entre 1 y 20.")
+        return None
+
+    aviso.config(text="")
+    return intento
     # Guarda el intento que escribiste
     try:
         intento = int(caja.get())
@@ -96,10 +115,18 @@ ventana = tk.Tk()
 ventana.title("Adivina el número - Equipo 5")
 ventana.geometry("380x480")
 ventana.configure(bg=FONDO)
-
+# Rosas Galvan Itzel: Aviso si faltan datos
 tk.Label(ventana, text="Adivina el número del 1 al 20", bg=FONDO, fg=COLOR_TEXTO, font=("Arial", 13, "bold")).pack(pady=10)
 caja = tk.Entry(ventana, bg=COLOR_CAJA, fg=COLOR_TEXTO, font=("Arial", 14), justify="center", relief="flat")
 caja.pack(pady=5)
+aviso = tk.Label(
+    ventana,
+    text="",
+    bg=FONDO,
+    fg="red",
+    font=("Arial", 10, "bold")
+)
+aviso.pack(pady=3)
 mensaje = tk.StringVar(); mensaje.set("Ya pensé un número, ¡adivínalo!")
 tk.Label(ventana, textvariable=mensaje, bg=FONDO, fg=COLOR_TEXTO, font=("Arial", 11, "bold"), wraplength=320).pack(pady=5)
 

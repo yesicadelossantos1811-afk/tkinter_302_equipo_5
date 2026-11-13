@@ -86,6 +86,11 @@ def otro_numero():
     caja.delete(0, tk.END)
     mensaje.set("Ya pensé otro número del 1 al 20, ¡adivínalo!")
 
+# Sanchez Salazar Miguel Angel: Botón Limpiar
+def limpiar():
+    caja.delete(0, tk.END)
+    mensaje.set("Caja limpia, escribe otro número")
+
 # De Los Santos Gutierrez Yessica Odet: Colores y nombre del equipo
 FONDO = "#FFE4EC"
 COLOR_BOTON = "#FF5C8A"
@@ -112,8 +117,9 @@ lista.pack(pady=8)
 tk.Button(ventana, text="Guardar", command=guardar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 tk.Button(ventana, text="Consultar", command=consultar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 tk.Button(ventana, text="Actualizar", command=actualizar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
-#Miguel Angel Sanchez Salazar
 tk.Button(ventana, text="Eliminar", command=eliminar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
+# Sanchez Salazar Miguel Angel: Botón Limpiar
+tk.Button(ventana, text="Limpiar", command=limpiar, bg=COLOR_BOTON, fg="white", font=("Arial", 11, "bold"), relief="flat", width=15).pack(pady=4)
 
 ventana.mainloop()
 

@@ -112,6 +112,7 @@ lista.pack(pady=8)
 tk.Button(ventana, text="Guardar", command=guardar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 tk.Button(ventana, text="Consultar", command=consultar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 tk.Button(ventana, text="Actualizar", command=actualizar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
+#Miguel Angel Sanchez Salazar
 tk.Button(ventana, text="Eliminar", command=eliminar, bg=COLOR_BOTON, fg="white", font=("Arial", 10, "bold"), relief="flat", width=15).pack(pady=2)
 
 ventana.mainloop()
